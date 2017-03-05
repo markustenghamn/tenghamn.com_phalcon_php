@@ -1,0 +1,756 @@
+/* Base */
+
+body
+{
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    max-width: 90%; /* you can use % */
+    word-wrap: break-word;
+}
+
+h1 {
+    font-size: 1.2em;
+}
+
+img {
+    background: url('/assets/images/loading.gif') 50% no-repeat;
+    max-width: 90%; /* you can use % */
+    height: auto;
+}
+
+.post h3 {
+    width:100%;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.post h3 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.post h3 a:visited, .post h3 a:active {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.post h3 a:hover {
+     color: #ffffff;
+}
+
+code { white-space: pre; }
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.console
+{
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+.caption {
+    font-weight: normal;
+}
+
+input[type="button"]
+{
+    cursor: pointer;
+}
+
+/* Loader */
+
+.loader {
+    width: 100%;
+    position: relative;
+    height: 300px;
+    display: none;
+    text-align: center;
+}
+
+.circle {
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    border:5px solid #333;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 11%;
+}
+
+.circle:after{
+    content:' ';
+    width:18px;
+    height:18px;
+    background:#333;
+    display:block;
+    border-radius:50%;
+}
+
+header {
+    width: 100%;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+footer {
+    height: 100px;
+}
+
+nav {
+    background-color:#000;
+    width: 100%;
+}
+
+nav ul {
+    overflow:hidden;
+    color:white;
+    padding:0;
+    margin:0;
+    text-align:center;
+    width: 100%;
+}
+
+nav ul li:first-child {
+    min-width: 50em;
+    text-align: left;
+}
+
+nav ul li {
+    display:inline-block;
+    padding:15px;
+}
+
+nav ul li:hover {
+    background-color:#1f1f1f;
+    color:white;
+}
+
+nav a, nav a:visited, nav a:active {
+    color:white;
+}
+
+.alert {
+    line-height: 1.5em;
+    padding:20px;
+    width:75%;
+    font-size: 1.3em;
+    margin:0 auto;
+    background-color: #eeeeee;
+}
+
+.col-md-4 {
+    width: 33.3%;
+    float: left;
+    display: block;
+}
+
+.services {
+    padding-right: 20px;
+}
+
+.col-md-8 {
+    width: 66.6%;
+    float: left;
+    display: block;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+* For IE 6/7 only
+* Include this rule to trigger hasLayout and contain floats.
+*/
+.cf {
+    *zoom: 1;
+}
+
+section {
+    line-height: 1.5em;
+    padding:20px;
+    width:75%;
+    font-size: 1.3em;
+    margin:0 auto;
+}
+
+section a {
+    text-decoration: underline;
+}
+
+.handle {
+    width:100%;
+    background: #000;
+    text-align:left;
+    box-sizing:border-box;
+    padding:15px 10px;
+    cursor:pointer;
+    color:white;
+    display:none;
+}
+
+@media screen and (max-width:600px){
+
+    .post h3 {
+        width: 87%;
+    }
+
+    nav ul li:first-child {
+        min-width: 100%;
+        text-align: left;
+    }
+    nav ul {
+        max-height:0;
+    }
+    nav ul li {
+        width:100%;
+        box-sizing:border-box;
+        padding:15px;
+        text-align:left;
+    }
+
+    header {
+        width:90%;
+    }
+
+    section {
+        padding:10px;
+        width:90%;
+    }
+
+    .handle {
+        display:block;
+    }
+    .divider {
+        display: none;
+    }
+    .showing {
+        max-height:20em;
+    }
+    .typer {
+        display: block;
+    }
+
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.comment {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html{
+    background:#3498db;
+}
+
+#feedback-page{
+    text-align:center;
+}
+
+#text-feedback{
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color:white;
+    text-align:center;
+}
+
+#form-main{
+    width:100%;
+    float:left;
+    padding-top:30px;
+}
+
+#form-div {
+    background-color:#3c3c3c;
+    padding-left:35px;
+    padding-right:35px;
+    padding-top:35px;
+    padding-bottom:50px;
+    width: 450px;
+    float: left;
+    left: 50%;
+    position: absolute;
+    margin-left: -260px;
+}
+
+.feedback-input {
+    opacity:0.9;
+    color:#0493bd;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-weight:400;
+    font-size: 18px;
+    border-radius: 0;
+    line-height: 22px;
+    background-color: #fbfbfb;
+    border: 3px solid #fbfbfb;
+    padding: 13px 13px 13px 54px;
+    margin-bottom: 10px;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.feedback-input:focus{
+    background: #fff;
+    box-shadow: 0;
+    border: 3px solid #3498db;
+    color: #3498db;
+    outline: none;
+    padding: 13px 13px 13px 54px;
+}
+
+.focused{
+    color:#30aed6;
+    border:#30aed6 solid 3px;
+}
+
+/* Icons ---------------------------------- */
+#name{
+    background-image: url('/assets/images/name.svg');
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#website{
+    background-image: url('/assets/images/home.svg');
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#name:focus{
+    background-image: url('/assets/images/name.svg');
+    background-size: 30px 30px;
+    background-position: 8px 5px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#email{
+    background-image: url('/assets/images/email.svg');
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#email:focus{
+    background-image: url('/assets/images/email.svg');
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#comment{
+    background-image: url('/assets/images/comment.svg');
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+    background-color:white;
+}
+
+#button-blue{
+    font-family: 'Montserrat', Helvetica, Arial,  sans-serif;
+    float:left;
+    width: 100%;
+    border: #fbfbfb solid 4px;
+    cursor:pointer;
+    background-color: #3498db;
+    color:white;
+    font-size:24px;
+    padding-top:22px;
+    padding-bottom:22px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#button-blue:hover{
+    background-color: rgba(0,0,0,0);
+    color: #0493bd;
+}
+
+.submit:hover {
+    color: #3498db;
+}
+
+.ease {
+    border-top:3px #3c3c3c solid;
+    width: 0px;
+    height: 76px;
+    background-color: #fbfbfb;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    -ms-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.submit:hover .ease{
+    width:100%;
+    background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+    #form-div{
+        left: 3%;
+        margin-right: 3%;
+        width: 88%;
+        margin-left: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+c+cpp+git+go+java+json+markdown+objectivec+php+php-extras+python+sass+scss+sql+swift&plugins=line-highlight+line-numbers+autolinker+highlight-keywords+previewer-base+previewer-color+autoloader+normalize-whitespace */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #f8f8f2;
+    background: none;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #f8f8f2;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+    color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+    color: #e6db74;
+}
+
+.token.keyword {
+    color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+    color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+pre[data-line] {
+    position: relative;
+    padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: inherit 0;
+    margin-top: 1em; /* Same as .prism’s padding-top */
+
+    background: hsla(24, 20%, 50%,.08);
+    background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+
+    pointer-events: none;
+
+    line-height: inherit;
+    white-space: pre;
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+    content: attr(data-start);
+    position: absolute;
+    top: .4em;
+    left: .6em;
+    min-width: 1em;
+    padding: 0 .5em;
+    background-color: hsla(24, 20%, 50%,.4);
+    color: hsl(24, 20%, 95%);
+    font: bold 65%/1.5 sans-serif;
+    text-align: center;
+    vertical-align: .3em;
+    border-radius: 999px;
+    text-shadow: none;
+    box-shadow: 0 1px white;
+}
+
+.line-highlight[data-end]:after {
+    content: attr(data-end);
+    top: auto;
+    bottom: .4em;
+}
+
+pre.line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+    position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.line-numbers-rows > span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+}
+.token a {
+    color: inherit;
+}
+.prism-previewer,
+.prism-previewer:before,
+.prism-previewer:after {
+    position: absolute;
+    pointer-events: none;
+}
+.prism-previewer,
+.prism-previewer:after {
+    left: 50%;
+}
+.prism-previewer {
+    margin-top: -48px;
+    width: 32px;
+    height: 32px;
+    margin-left: -16px;
+
+    opacity: 0;
+    -webkit-transition: opacity .25s;
+    -o-transition: opacity .25s;
+    transition: opacity .25s;
+}
+.prism-previewer.flipped {
+    margin-top: 0;
+    margin-bottom: -48px;
+}
+.prism-previewer:before,
+.prism-previewer:after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+}
+.prism-previewer:before {
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+.prism-previewer:after {
+    top: 100%;
+    width: 0;
+    height: 0;
+    margin: 5px 0 0 -7px;
+    border: 7px solid transparent;
+    border-color: rgba(255, 0, 0, 0);
+    border-top-color: #fff;
+}
+.prism-previewer.flipped:after {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-top-color: rgba(255, 0, 0, 0);
+    border-bottom-color: #fff;
+}
+.prism-previewer.active {
+    opacity: 1;
+}
+.prism-previewer-color {
+    background-image: linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%, #bbb), linear-gradient(45deg, #bbb 25%, #eee 25%, #eee 75%, #bbb 75%, #bbb);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+}
+.prism-previewer-color:before {
+    background-color: inherit;
+    background-clip: padding-box;
+}
+
+
+
